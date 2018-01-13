@@ -1,0 +1,6 @@
+D:\HY\Baby\BabyBirth\bin\BabyBirth.dll.config
+D:\HY\Baby\BabyBirth\bin\BabyBirth.dll
+D:\HY\Baby\BabyBirth\bin\BabyBirth.pdb
+D:\HY\Baby\BabyBirth\obj\Debug\BabyBirth.csprojResolveAssemblyReference.cache
+D:\HY\Baby\BabyBirth\obj\Debug\BabyBirth.dll
+D:\HY\Baby\BabyBirth\obj\Debug\BabyBirth.pdb

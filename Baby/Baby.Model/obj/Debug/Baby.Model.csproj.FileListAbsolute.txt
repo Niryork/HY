@@ -1,0 +1,4 @@
+D:\HY\Baby\Baby.Model\bin\Debug\Baby.Model.dll
+D:\HY\Baby\Baby.Model\bin\Debug\Baby.Model.pdb
+D:\HY\Baby\Baby.Model\obj\Debug\Baby.Model.dll
+D:\HY\Baby\Baby.Model\obj\Debug\Baby.Model.pdb

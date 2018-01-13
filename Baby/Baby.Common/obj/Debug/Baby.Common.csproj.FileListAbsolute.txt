@@ -1,0 +1,5 @@
+D:\HY\Baby\Baby.Common\bin\Debug\Baby.Common.dll
+D:\HY\Baby\Baby.Common\bin\Debug\Baby.Common.pdb
+D:\HY\Baby\Baby.Common\obj\Debug\Baby.Common.csprojResolveAssemblyReference.cache
+D:\HY\Baby\Baby.Common\obj\Debug\Baby.Common.dll
+D:\HY\Baby\Baby.Common\obj\Debug\Baby.Common.pdb

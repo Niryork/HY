@@ -1,0 +1,14 @@
+D:\HY\Baby\BabyBirth\obj\Debug\Baby.Birth.csprojResolveAssemblyReference.cache
+D:\HY\Baby\BabyBirth\obj\Debug\BabyBirth.dll
+D:\HY\Baby\BabyBirth\obj\Debug\BabyBirth.pdb
+D:\HY\Baby\BabyBirth\bin\BabyBirth.dll.config
+D:\HY\Baby\BabyBirth\bin\BabyBirth.dll
+D:\HY\Baby\BabyBirth\bin\BabyBirth.pdb
+D:\HY\Baby\BabyBirth\bin\Baby.BLL.dll
+D:\HY\Baby\BabyBirth\bin\Baby.Model.dll
+D:\HY\Baby\BabyBirth\bin\Baby.BLL.pdb
+D:\HY\Baby\BabyBirth\bin\Baby.Model.pdb
+D:\HY\Baby\BabyBirth\bin\Baby.DAL.dll
+D:\HY\Baby\BabyBirth\bin\Baby.DAL.pdb
+D:\HY\Baby\BabyBirth\bin\Baby.Common.dll
+D:\HY\Baby\BabyBirth\bin\Baby.Common.pdb

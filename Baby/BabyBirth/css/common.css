@@ -1,0 +1,135 @@
+﻿* {
+    margin: auto auto;
+}
+
+body {
+    font-size: 13px;
+    font-family: 微软雅黑;
+    vertical-align:central
+}
+
+a {
+    text-decoration: none;
+}
+
+.border {
+    border: 1px solid black;
+}
+
+
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.tr {
+    text-align: right;
+}
+
+.tc {
+    text-align: center;
+}
+
+.tl {
+    text-align: left;
+}
+.vc{
+    vertical-align:central;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+    .clearfix:before,
+    .clearfix:after {
+        display: table;
+        line-height: 0;
+        content: "";
+    }
+
+    .clearfix:after {
+        clear: both;
+    }
+
+.hidden {
+    display: none;
+}
+
+.white {
+    color: #fff;
+}
+
+.red {
+    color: red;
+}
+
+.blue {
+    color: #00afe4;
+}
+
+ul, ul li {
+    list-style: none;
+}
+
+.mtop10 {
+    margin-top: 10px;
+}
+
+.mleft10 {
+    margin-left: 10px;
+}
+
+.mright10 {
+    margin-right: 10px;
+}
+
+.pleft10 {
+    padding-left: 10px;
+}
+.pright10{
+    padding-right:10px;
+}
+.pleft20 {
+    padding-left: 20px;
+}
+
+
+/*body*/
+
+.container {
+    width: 700px;
+}
+#content{
+    width:690px;
+}
+#content tr td select:first-child{
+    width:80px;
+}
+#content tr td input, #content tr td select {
+    border: 1px solid black;
+    width: 72%;
+}
+#weeks, #days {
+    width: 40px;
+}
+
+#babyweight, #babyheight {
+    width: 40px;
+}
+
+#begintime, #endtime, #searchbar,#search {
+    width: 78px;
+    border:1px solid black;
+}
+
+#btnsubmit,#btncancel,#btnsearch{
+    border:1px solid black;
+    background-color:white;
+}
+
+

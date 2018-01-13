@@ -1,0 +1,9 @@
+D:\HY\Baby\Baby.DAL\bin\Debug\Baby.DAL.dll
+D:\HY\Baby\Baby.DAL\bin\Debug\Baby.DAL.pdb
+D:\HY\Baby\Baby.DAL\bin\Debug\Baby.Model.dll
+D:\HY\Baby\Baby.DAL\bin\Debug\Maticsoft.Common.dll
+D:\HY\Baby\Baby.DAL\bin\Debug\Maticsoft.DBUtility.dll
+D:\HY\Baby\Baby.DAL\bin\Debug\Baby.Model.pdb
+D:\HY\Baby\Baby.DAL\obj\Debug\Baby.DAL.csprojResolveAssemblyReference.cache
+D:\HY\Baby\Baby.DAL\obj\Debug\Baby.DAL.dll
+D:\HY\Baby\Baby.DAL\obj\Debug\Baby.DAL.pdb
