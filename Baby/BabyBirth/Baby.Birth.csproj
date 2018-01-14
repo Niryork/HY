@@ -61,7 +61,8 @@
     <Content Include="css\jquery.pagination.css" />
     <Content Include="css\style.css" />
     <Content Include="default.aspx" />
-    <Content Include="js\jquery.min.js" />
+    <Content Include="index.html" />
+    <Content Include="js\jquery-1.10.2.min.js" />
     <Content Include="js\jquery.pagination.min.js" />
     <Content Include="js\laydate\laydate.js" />
     <Content Include="js\laydate\theme\default\font\iconfont.svg" />

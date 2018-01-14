@@ -47,8 +47,8 @@ namespace Baby.Model
 		/// </summary>
 		public string BName
 		{
-			set{ _bname=value;}
-			get{return _bname;}
+            set { _bname = value; }
+            get { return _bname; }
 		}
 		/// <summary>
 		/// 
@@ -72,7 +72,7 @@ namespace Baby.Model
 		public int? Hid
 		{
 			set{ _hid=value;}
-			get{return _hid;}
+            get { return _hid; }
 		}
 		/// <summary>
 		/// 
@@ -80,7 +80,7 @@ namespace Baby.Model
 		public DateTime? Intime
 		{
 			set{ _intime=value;}
-			get{return _intime;}
+            get { return _intime; }
 		}
 		/// <summary>
 		/// 
@@ -88,7 +88,7 @@ namespace Baby.Model
 		public DateTime? Birthday
 		{
 			set{ _birthday=value;}
-			get{return _birthday;}
+            get { return _birthday; }
 		}
 		/// <summary>
 		/// 

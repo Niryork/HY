@@ -28,7 +28,7 @@ namespace BabyBirth
         /// </summary>
         private void GetInformation()
         {
-            List<V_Info> list = bll.GetInfo();
+            List<Information> list = bll.GetInfo();
             string json = JSONConvert.Object2Json(list);
             Response.Write(json);
         }

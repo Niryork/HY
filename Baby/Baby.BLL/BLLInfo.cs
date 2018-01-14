@@ -9,7 +9,7 @@ namespace Baby.BLL
     public class BLLInfo
     {
         DALInfo dal = new DALInfo();
-        public List<V_Info> GetInfo()
+        public List<Information> GetInfo()
         {
             return dal.GetInfo();
         }
