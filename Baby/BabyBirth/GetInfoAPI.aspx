@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="GetInfoAPI.aspx.cs" Inherits="BabyBirth.GetInfoAPI" %>

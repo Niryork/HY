@@ -60,23 +60,32 @@
     <Content Include="css\common.css" />
     <Content Include="css\jquery.pagination.css" />
     <Content Include="css\style.css" />
-    <Content Include="default.aspx" />
+    <Content Include="GetInfoAPI.aspx" />
     <Content Include="index.html" />
     <Content Include="js\jquery-1.10.2.min.js" />
     <Content Include="js\jquery.pagination.min.js" />
+    <Content Include="js\info.js" />
     <Content Include="js\laydate\laydate.js" />
     <Content Include="js\laydate\theme\default\font\iconfont.svg" />
     <Content Include="js\laydate\theme\default\laydate.css" />
-    <Content Include="js\PostToBack.js" />
+    <Content Include="PostAPI.aspx" />
+    <Content Include="test.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="default.aspx.cs">
-      <DependentUpon>default.aspx</DependentUpon>
+    <Compile Include="GetInfoAPI.aspx.cs">
+      <DependentUpon>GetInfoAPI.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="default.aspx.designer.cs">
-      <DependentUpon>default.aspx</DependentUpon>
+    <Compile Include="GetInfoAPI.aspx.designer.cs">
+      <DependentUpon>GetInfoAPI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PostAPI.aspx.cs">
+      <DependentUpon>PostAPI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PostAPI.aspx.designer.cs">
+      <DependentUpon>PostAPI.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
