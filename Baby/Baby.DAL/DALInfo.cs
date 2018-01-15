@@ -13,6 +13,7 @@ namespace Baby.DAL
         DALCommon dal = DALCommon.CreateIntance();
         string msg = "";
         SqlParameter[] splist = null;
+        DateTime time = DateTime.Now;
         /// <summary>
         /// Get info from v_info
         /// </summary>
@@ -27,7 +28,19 @@ namespace Baby.DAL
 
         public bool InsertIntoPatience(Patience pSource)
         {
-            string sql = dal.MakeInsertSql<Patience>(pSource, out splist, null);
+            //if (pSource.Recordtime == null)
+            //{
+            //    pSource.Recordtime = time;
+            //}
+
+            //string insertCol = "bid,mid,bname,sex,hid,intime,leavetime,birthday,birthtime,pregnantweeks,birthplace,babynum,babytime,babyweight,babyheight,recordtime";
+            //for (int i = 0; i < 16; i++)
+            //{
+            //    sql = string.Format("insert into Patience ({0}) values ({1},{2},{3})"); 
+            //}
+
+            string sql = dal.MakeInsertSql<Patience>(pSource, null);
+
             return (dal.ExecuteNonquery(sql, out msg, splist) > 0);
         }
 
@@ -41,12 +54,12 @@ namespace Baby.DAL
             List<Information> info = new List<Information>();
             foreach (var item in list)
             {
-                Information i = new Information() { BID=item.BID,BName = item.BName,Sex=item.Sex,Hid=item.Hid, HName = item.HName};
+                Information i = new Information() { BID = item.BID, BName = item.BName, Sex = item.Sex, Hid = item.Hid, HName = item.HName };
 
-                DateTime time = item.Birthday == null ? DateTime.Now: Convert.ToDateTime(item.Birthday);
+                DateTime time = item.Birthday == null ? DateTime.Now : Convert.ToDateTime(item.Birthday);
                 i.Birthday = time.ToString("yyyy-MM-dd");
 
-                time = item.Intime == null ? DateTime.Now: Convert.ToDateTime(item.Intime);
+                time = item.Intime == null ? DateTime.Now : Convert.ToDateTime(item.Intime);
                 i.Intime = time.ToString("yyyy-MM-dd");
 
                 time = item.Recordtime == null ? DateTime.Now : Convert.ToDateTime(item.Recordtime);

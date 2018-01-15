@@ -1,10 +1,17 @@
-﻿$(document).ready(function () {
+﻿/// <reference path="D:\HY\Baby\BabyBirth\api/PostAPI.aspx" />
+$(document).ready(function () {
     initList();
 
 
 
     $('#btnsubmit').click(function () {
         insert();
+    })
+
+    $('#btncancel').click(function () {
+        if (confirm("你确定取消录入吗？")) {
+            $('#content tr td input').val('');
+        }
     })
 })
 
@@ -61,16 +68,37 @@ function getLocalTime(nS) {
 
 //insert data to database
 function insert() {
-    var patience = GetInfo();
+    var patience = new Patient();
+    patience.BID = $('#BID').val() == '' ? '1000002' : $('#BID').val();
+    patience.MID = $('#midwife').val() == '--' ? '10001' : '10000';
+    patience.BName = $('#BName').val();
+    patience.Sex = $('#Sex').val();
+    patience.Hid = $('#HID').val();
+    patience.Intime = $('#intime').val();
+    patience.Leavetime = $('#leavetime').val();
+    patience.Birthday = $('#birthday').val();
+    patience.Birthtime = $('#birthtime').val();
+    patience.PregnantWeeks = parseInt($('#weeks').val()) * 7 + parseInt($('#days').val());
+    patience.BirthPlace = $('#place').val();
+    patience.BabyNum = $('#babynum').val();
+    patience.BabyTime = $('#babytime').val();
+    patience.BabyWeight = $('#babyweight').val();
+    patience.BabyHeight = $('#babyheight').val();
+    patience.Recordtime = Datetime_Now()
+    patience = JSON.stringify(patience);
+
+
+
     $.ajax({
-        url: "PostAPI.aspx",
-        type: "post",
+        url: '/api/PostAPI.aspx',
+        type: "POST",
         cache: false,//是否要缓存
         async: true,//是否要异步
+        //content-type:application/json,
         data: {
             patient: patience,
         },
-        dataType: "json",//返回类型为“文本格式”:"text"；JSON格式：json
+        dataType: "text",//返回类型为“文本格式”:"text"；JSON格式：json
         success: function (msg) {
             alert(msg)
         },
@@ -80,26 +108,41 @@ function insert() {
     })
 };
 
-function GetInfo() {
-    var bid = $('#BID').val() == '' ? '0.0.0' : $('#BID').val();
-    var sex = $('#Sex').val();
-    var name = $('#BName').val();
-    var hid = $('#HID').val();
-    var intime = $('#intime').val();
-    var leave = $('#leavetime').val();
-    var day = $('#birthday').val();
-    var time = $('#birthtime').val();
-    var date = $('#weeks').val() * 7 + $('#days').val();
-
-    var place = $('#place').val();
-    var hospital = $('#HName').val();
-    var midwife = $('#midwife').val();
-    var babynum = $('#babynum').val();
-
-    var babytime = $('#babytime').val();
-    var babyweight = $('#babyweight').val();
-    var babyheight = $('#babyheight').val();
-    var patience = [bid, sex, name, hid, intime, leave, day, time, date, place, babynum, babytime, babyweight, babyheight];
-    var hospital = [hospital, midwife];
-    return patience;
+//Patient model
+function Patient() {
+    this.BID;
+    this.MID;
+    this.BName;
+    this.Sex;
+    this.Hid;
+    this.Intime;
+    this.Leavetime;
+    this.Birthday;
+    this.Birthtime;
+    this.BirthPlace
+    this.PregnantWeeks;
+    this.BabyNum;
+    this.BabyTime;
+    this.BabyWeight;
+    this.BabyHeight;
+    this.Recordtime
 }
+//Get current date
+function Datetime_Now() {
+    var date = new Date();
+    var seperator1 = "-";
+    var seperator2 = ":";
+    var month = date.getMonth() + 1;
+    var strDate = date.getDate();
+    if (month >= 1 && month <= 9) {
+        month = "0" + month;
+    }
+    if (strDate >= 0 && strDate <= 9) {
+        strDate = "0" + strDate;
+    }
+    var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate
+            + " " + date.getHours() + seperator2 + date.getMinutes()
+            + seperator2 + date.getSeconds();
+    return currentdate;
+}
+

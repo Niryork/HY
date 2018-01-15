@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-
 using System.Web.Script.Serialization;
 
 namespace Baby.Common
@@ -33,8 +32,21 @@ namespace Baby.Common
         /// <returns></returns>
         public static T Json2Object<T>(string json)
         {
-            JavaScriptSerializer js = new JavaScriptSerializer();
-            return js.Deserialize<T>(json);
+            T model = default(T);
+            try
+            {
+                JavaScriptSerializer js = new JavaScriptSerializer();
+                model = js.Deserialize<T>(json);
+
+
+                return model;
+            }
+            catch (Exception ex)
+            {
+                string msg = ex.Message;
+                return model;
+
+            }
         }
     }
 }

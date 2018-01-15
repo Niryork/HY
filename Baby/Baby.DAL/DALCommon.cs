@@ -282,6 +282,10 @@ namespace Baby.DAL
         /// <returns></returns>
         public string MakeInsertSql<T>(T model, String[] UnInsertColumns, bool isUnColumns = true, string tablename = null)
         {
+            if (model==null)
+            {
+                return "";
+            }
             //将不要插入的列转换成小写
             UnInsertColumns = ToLower(UnInsertColumns);
 

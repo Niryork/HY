@@ -13,29 +13,36 @@ namespace BabyBirth
     public partial class PostAPI : System.Web.UI.Page
     {
         BLLInfo bll = new BLLInfo();
+        int index = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
             InsertInfo();
         }
         private void InsertInfo()
         {
-            Patience p = new Patience();
-            string json = "";
-            json = Request.Form["patient"];
-            if (string.IsNullOrEmpty(json))
+            //Patience p = new Patience();
+            string json = Request.Form["patient"];
+
+            //if (string.IsNullOrEmpty(json))
+            //{
+            //    return;
+            //}
+            //将json字符串转换为Patience
+            //p = JSONConvert.Json2Object<Patience>(json);
+            Patience p = JSONConvert.Json2Object<Patience>(json);
+            if (p==null)
             {
                 return;
             }
-            //将json字符串转换为Patience
-            p = JSONConvert.Json2Object<Patience>(json);
-
             json = "写入成功";
+
             if (!bll.InsertIntoPatience(p))
             {
                 json = "写入失败，请确认数据无误";
                 Response.Write(json);
             }
             Response.Write(json);
+            index++;
         }
 
     }

@@ -14,7 +14,7 @@
 <body>
     <div class="container border">
         <div class="pleft10 pright10 clearfix" style="height: 20px; border-bottom: 1px solid black"><b>》当前功能:出生信息登记</b></div>
-        <form action="/PostAPI.aspx" method="post">
+        <!--<form action="/api/PostAPI.aspx" method="post">-->
             <div class="pleft10 pright10">
                 <div class="cm" style="width: 98%;">
                     <table>
@@ -38,9 +38,9 @@
                                         <td style="width: 60px;">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 别:</td>
                                         <td colspan="3" style="width: 200px;">
                                             <select id="Sex">
-                                                <option value="man">男</option>
-                                                <option value="woman">女</option>
-                                                <option value="unknown">不详</option>
+                                                <option value="xy">男</option>
+                                                <option value="xx">女</option>
+                                                <option value="yy">不详</option>
                                             </select>
                                         </td>
                                     </tr>
@@ -80,6 +80,7 @@
                                                 <option value="home">在家</option>
                                                 <option value="other">其他</option>
                                             </select>
+                                            <input id="otherplace" type="text" disabled="disabled" style="width:30%"/>
                                         </td>
                                         <td>接生医院:</td>
                                         <td>
@@ -99,9 +100,9 @@
                                         <td>胎&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 数:</td>
                                         <td class="auto-style6">
                                             <select id="babynum">
-                                                <option value="one">单胎</option>
-                                                <option value="twin">双胎</option>
-                                                <option value="more">多胎</option>
+                                                <option value="1">单胎</option>
+                                                <option value="2">双胎</option>
+                                                <option value="3">多胎</option>
                                             </select>
                                         </td>
                                         <td>胎&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 次:</td>
@@ -131,7 +132,7 @@
                     </div>
                 </div>
             </div>
-        </form>
+        <!--</form>-->
         <div class="clearfix"></div>
         <div class="pleft10 pright10">
             <div><b>======-出生信息查询====================================</b></div>
@@ -204,7 +205,18 @@
             elem: '#birthtime'
           , type: 'time'
         });
-
+        //限定可选日期
+        var min = $('#intime').val().toString()
+        var max = $('#leavetime').val().toString()
+        var str = '日期可选值设定在 <br> ' + min + ' 到 ' + max;
+        var ins22 = laydate.render({
+            elem: '#birthday'
+          , min:min
+          , max: max
+          , ready: function () {
+              ins22.hint(str);
+          }
+        });
     </script>
 
 

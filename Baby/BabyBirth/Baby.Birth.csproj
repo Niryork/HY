@@ -59,7 +59,6 @@
   <ItemGroup>
     <Content Include="css\common.css" />
     <Content Include="css\jquery.pagination.css" />
-    <Content Include="css\style.css" />
     <Content Include="GetInfoAPI.aspx" />
     <Content Include="index.html" />
     <Content Include="js\jquery-1.10.2.min.js" />
@@ -68,8 +67,7 @@
     <Content Include="js\laydate\laydate.js" />
     <Content Include="js\laydate\theme\default\font\iconfont.svg" />
     <Content Include="js\laydate\theme\default\laydate.css" />
-    <Content Include="PostAPI.aspx" />
-    <Content Include="test.html" />
+    <Content Include="api\PostAPI.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -80,11 +78,11 @@
     <Compile Include="GetInfoAPI.aspx.designer.cs">
       <DependentUpon>GetInfoAPI.aspx</DependentUpon>
     </Compile>
-    <Compile Include="PostAPI.aspx.cs">
+    <Compile Include="api\PostAPI.aspx.cs">
       <DependentUpon>PostAPI.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="PostAPI.aspx.designer.cs">
+    <Compile Include="api\PostAPI.aspx.designer.cs">
       <DependentUpon>PostAPI.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
