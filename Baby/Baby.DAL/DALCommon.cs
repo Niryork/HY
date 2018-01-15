@@ -282,7 +282,7 @@ namespace Baby.DAL
         /// <returns></returns>
         public string MakeInsertSql<T>(T model, String[] UnInsertColumns, bool isUnColumns = true, string tablename = null)
         {
-            if (model==null)
+            if (model == null)
             {
                 return "";
             }
@@ -1089,6 +1089,7 @@ namespace Baby.DAL
                             object value = dr[tempName];
                             //如果非空，则赋给对象的属性  
                             if (value != DBNull.Value)
+                                
                                 pi.SetValue(t, value, null);
                         }
                     }

@@ -15,123 +15,135 @@
     <div class="container border">
         <div class="pleft10 pright10 clearfix" style="height: 20px; border-bottom: 1px solid black"><b>》当前功能:出生信息登记</b></div>
         <!--<form action="/api/PostAPI.aspx" method="post">-->
-            <div class="pleft10 pright10">
-                <div class="cm" style="width: 98%;">
-                    <table>
-                        <tr>
-                            <td class="header">
-                                <b>======-出生信息登记操作====================================</b>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <table id="content">
-                                    <tr>
-                                        <td style="width: 60px;">出生证号:</td>
-                                        <td style="width: 130px;">
-                                            <input id="BID" type="text" />
-                                        </td>
-                                        <td style="width: 60px;">姓&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;名:</td>
-                                        <td style="width: 130px;">
-                                            <input id="BName" type="text" />
-                                        </td>
-                                        <td style="width: 60px;">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 别:</td>
-                                        <td colspan="3" style="width: 200px;">
-                                            <select id="Sex">
-                                                <option value="xy">男</option>
-                                                <option value="xx">女</option>
-                                                <option value="yy">不详</option>
-                                            </select>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>住&nbsp; 院 号:</td>
-                                        <td>
-                                            <input id="HID" type="text" />
-                                        </td>
-                                        <td>住院日期:</td>
-                                        <td>
-                                            <input id="intime" type="text" class="time" placeholder="  -  -  " />
-                                        </td>
-                                        <td>出院日期:</td>
-                                        <td colspan="3">
-                                            <input id="leavetime" type="text" class="time" style="width: 80px;" placeholder="  -  -  " />
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>出生日期:</td>
-                                        <td>
-                                            <input id="birthday" type="text" class="time" placeholder="  -  -  " />
-                                        </td>
-                                        <td>出生时间:</td>
-                                        <td>
-                                            <input id="birthtime" type="text" />
-                                        </td>
-                                        <td>出生孕周:</td>
-                                        <td colspan="3">
-                                            <input id="weeks" type="text" style="width: 40px;" />周<input id="days" type="text" style="width: 35px;" />天
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>分娩地点:</td>
-                                        <td>
-                                            <select id="place">
-                                                <option value="hospital">医院</option>
-                                                <option value="home">在家</option>
-                                                <option value="other">其他</option>
-                                            </select>
-                                            <input id="otherplace" type="text" disabled="disabled" style="width:30%"/>
-                                        </td>
-                                        <td>接生医院:</td>
-                                        <td>
-                                            <select id="HName">
-                                                <option value="yb">福建省妇幼保健院</option>
-                                                <option value="slyy">福建省立医院</option>
-                                            </select>
-                                        </td>
-                                        <td>接 生 员:</td>
-                                        <td colspan="3">
-                                            <select id="midwife">
-                                                <option value="--">--</option>
-                                            </select>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>胎&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 数:</td>
-                                        <td class="auto-style6">
-                                            <select id="babynum">
-                                                <option value="1">单胎</option>
-                                                <option value="2">双胎</option>
-                                                <option value="3">多胎</option>
-                                            </select>
-                                        </td>
-                                        <td>胎&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 次:</td>
-                                        <td>
-                                            <input id="babytime" type="text" style="width: 35px" />
-                                        </td>
-                                        <td>出生体重</td>
-                                        <td>
-                                            <input id="babyweight" type="text" style="width: 45px" />kg&nbsp;
-                                        </td>
-                                        <td style="width: 60px;">出生身长:</td>
-                                        <td>
-                                            <input id="babyheight" type="text" style="width: 45px" />cm
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
+        <div class="pleft10 pright10">
+            <div class="cm" style="width: 98%;">
+                <table>
+                    <tr>
+                        <td class="header">
+                            <b>======-出生信息登记操作====================================</b>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <table id="content">
+                                <tr>
+                                    <td style="width: 60px;">出生证号:</td>
+                                    <td style="width: 130px;">
+                                        <input id="BID" type="text" />
+                                    </td>
+                                    <td style="width: 60px;">姓&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;名:</td>
+                                    <td style="width: 130px;">
+                                        <input id="BName" type="text" />
+                                    </td>
+                                    <td style="width: 60px;">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 别:</td>
+                                    <td colspan="3" style="width: 200px;">
+                                        <select id="Sex">
+                                            <option value="xy">男</option>
+                                            <option value="xx">女</option>
+                                            <option value="yy">不详</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>住&nbsp; 院 号:</td>
+                                    <td>
+                                        <input id="HID" type="text" />
+                                    </td>
+                                    <td>住院日期:</td>
+                                    <td>
+                                        <input id="intime" type="text" class="time" placeholder="  -  -  " />
+                                    </td>
+                                    <td>出院日期:</td>
+                                    <td colspan="3">
+                                        <input id="leavetime" type="text" class="time" style="width: 80px;" placeholder="  -  -  " />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>出生日期:</td>
+                                    <td>
+                                        <input id="birthday" type="text" class="time" placeholder="  -  -  " />
+                                    </td>
+                                    <td>出生时间:</td>
+                                    <td>
+                                        <input id="birthtime" type="text" />
+                                    </td>
+                                    <td>出生孕周:</td>
+                                    <td colspan="3">
+                                        <input id="weeks" type="text" style="width: 40px;" />周               <span>
+                                            <select id="days" style="width: 35px;">
+                                                <option value="0">0</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                            </select>天
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>分娩地点:</td>
+                                    <td>
+                                        <select id="place">
+                                            <option>--</option>
+                                            <option value="hospital">医院</option>
+                                            <option value="home">在家</option>
+                                            <option value="other">其他</option>
+                                        </select>
+                                        <input id="otherplace" type="text" disabled="disabled" style="width:30%" />
+                                    </td>
+                                    <td>接生医院:</td>
+                                    <td>
+                                        <select id="HName">
+                                            <option>--</option>
+                                            <!--<option value="福建省妇幼保健院	">福建省妇幼保健院</option>
+                                            <option value="福建省立医院">福建省立医院</option>-->
+                                        </select>
+                                    </td>
+                                    <td>接 生 员:</td>
+                                    <td colspan="3">
+                                        <select id="midwife">
+                                            <option value="--">--</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>胎&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 数:</td>
+                                    <td class="auto-style6">
+                                        <select id="babynum">
+                                            <option value="1">单胎</option>
+                                            <option value="2">双胎</option>
+                                            <option value="3">多胎</option>
+                                        </select>
+                                    </td>
+                                    <td>胎&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 次:</td>
+                                    <td>
+                                        <input id="babytime" type="text" style="width: 35px" />
+                                    </td>
+                                    <td>出生体重</td>
+                                    <td>
+                                        <input id="babyweight" type="text" style="width: 45px" />kg&nbsp;
+                                    </td>
+                                    <td style="width: 60px;">出生身长:</td>
+                                    <td>
+                                        <input id="babyheight" type="text" style="width: 45px" />cm
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="pleft10 pright10 tr" style="width:98%">
+                <div class="tr fl pright10" style="width: 68%;">
+                    <input id="btnsubmit" type="submit" value="提交" />
                 </div>
-                <div class="pleft10 pright10 tr" style="width:98%">
-                    <div class="tr fl pright10" style="width: 68%;">
-                        <input id="btnsubmit" type="submit" value="提交" />
-                    </div>
-                    <div class="tl fl pleft10 pright10">
-                        <input id="btncancel" type="button" value="取消" />
-                    </div>
+                <div class="tl fl pleft10 pright10">
+                    <input id="btncancel" type="button" value="取消" />
                 </div>
             </div>
+        </div>
         <!--</form>-->
         <div class="clearfix"></div>
         <div class="pleft10 pright10">
@@ -161,8 +173,8 @@
             </div>
             <div class="tr">分页预留</div>
 
-            <div style="width: 100% ">
-                <table style="width: 100%;border:1px solid" border="1" id="information" cellspacing="0">
+            <div style="width: 100%;padding-bottom:10px;">
+                <table id="information" style="width: 100%;border:1px solid" border="1" cellspacing="0">
                     <thead>
                         <tr>
                             <th>登记日期</th>
@@ -211,7 +223,7 @@
         var str = '日期可选值设定在 <br> ' + min + ' 到 ' + max;
         var ins22 = laydate.render({
             elem: '#birthday'
-          , min:min
+          , min: min
           , max: max
           , ready: function () {
               ins22.hint(str);

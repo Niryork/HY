@@ -59,31 +59,31 @@
   <ItemGroup>
     <Content Include="css\common.css" />
     <Content Include="css\jquery.pagination.css" />
-    <Content Include="GetInfoAPI.aspx" />
     <Content Include="index.html" />
+    <Content Include="js\getUrlParam.js" />
     <Content Include="js\jquery-1.10.2.min.js" />
     <Content Include="js\jquery.pagination.min.js" />
     <Content Include="js\info.js" />
     <Content Include="js\laydate\laydate.js" />
     <Content Include="js\laydate\theme\default\font\iconfont.svg" />
     <Content Include="js\laydate\theme\default\laydate.css" />
-    <Content Include="api\PostAPI.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GetInfoAPI.aspx.cs">
-      <DependentUpon>GetInfoAPI.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
+    <Compile Include="api\GetHospitalapi.ashx.cs">
+      <DependentUpon>GetHospitalapi.ashx</DependentUpon>
     </Compile>
-    <Compile Include="GetInfoAPI.aspx.designer.cs">
-      <DependentUpon>GetInfoAPI.aspx</DependentUpon>
+    <Compile Include="api\Getlistapi.ashx.cs">
+      <DependentUpon>Getlistapi.ashx</DependentUpon>
     </Compile>
-    <Compile Include="api\PostAPI.aspx.cs">
-      <DependentUpon>PostAPI.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
+    <Compile Include="api\Informationapi.ashx.cs">
+      <DependentUpon>Informationapi.ashx</DependentUpon>
     </Compile>
-    <Compile Include="api\PostAPI.aspx.designer.cs">
-      <DependentUpon>PostAPI.aspx</DependentUpon>
+    <Compile Include="api\DeleteByBIDapi.ashx.cs">
+      <DependentUpon>DeleteByBIDapi.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="api\UptByBIDapi.ashx.cs">
+      <DependentUpon>UptByBIDapi.ashx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -91,6 +91,11 @@
     <Content Include="js\laydate\theme\default\font\iconfont.eot" />
     <Content Include="js\laydate\theme\default\font\iconfont.ttf" />
     <Content Include="js\laydate\theme\default\font\iconfont.woff" />
+    <Content Include="api\Getlistapi.ashx" />
+    <Content Include="api\Informationapi.ashx" />
+    <Content Include="api\DeleteByBIDapi.ashx" />
+    <Content Include="api\UptByBIDapi.ashx" />
+    <Content Include="api\GetHospitalapi.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

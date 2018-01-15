@@ -37,10 +37,10 @@ namespace Baby.Model
 		private DateTime? _birthtime;
 		private int? _pregnantweeks;
 		private string _birthplace;
-		private int? _babynum;
+		private string _babynum;
 		private int? _babytime;
-		private decimal? _babyweight;
-		private decimal? _babyheight;
+		private double _babyweight;
+		private double _babyheight;
 		private DateTime? _recordtime;
 		/// <summary>
 		/// 
@@ -133,7 +133,7 @@ namespace Baby.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public int? BabyNum
+		public string BabyNum
 		{
 			set{ _babynum=value;}
 			get{return _babynum;}
@@ -149,7 +149,7 @@ namespace Baby.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public decimal? BabyWeight
+		public double BabyWeight
 		{
 			set{ _babyweight=value;}
 			get{return _babyweight;}
@@ -157,7 +157,7 @@ namespace Baby.Model
 		/// <summary>
 		/// 
 		/// </summary>
-		public decimal? BabyHeight
+		public double BabyHeight
 		{
 			set{ _babyheight=value;}
 			get{return _babyheight;}
@@ -172,6 +172,27 @@ namespace Baby.Model
 		}
 		#endregion Model
 
-	}
+        #region 扩展属性
+        private string _midwife;
+        private string _hname;
+
+        public string Midwife
+        {
+            set { _midwife = value; }
+            get { return _midwife; }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        public string HName
+        {
+            set { _hname = value; }
+            get { return _hname; }
+        }
+
+        #endregion
+
+
+    }
 }
 
