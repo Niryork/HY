@@ -18,7 +18,7 @@ namespace BabyBirth
         {
             string json = context.Request.Form["patient"];
 
-            //将提交的信息转换为patience对象
+            //将提交的信息转换为patience对象 
             Patience p = JSONConvert.Json2Object<Patience>(json);
             if (p == null)
             {

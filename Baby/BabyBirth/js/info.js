@@ -9,7 +9,9 @@ $(document).ready(function () {
         getMidwife($(this).val())
     })
     $('#btnsubmit').on('click', function () {
+        if ($('#BID').attr('disabled')) {
 
+        }
         if (confirm("你确定录入吗？")) {
             insert();
         }
@@ -195,6 +197,48 @@ function insert() {
         }
     })
 };
+//function uptInfo() {
+//    var patience = new Patient();
+//    patience.BID = $('#BID').val();
+//    patience.MID = $('#midwife').val();
+//    patience.BName = $('#BName').val();
+//    patience.Sex = $('#Sex').val();
+//    patience.Hid = $('#HID').val();
+//    patience.Intime = $('#intime').val();
+//    patience.Leavetime = $('#leavetime').val();
+//    patience.Birthday = $('#birthday').val();
+//    patience.Birthtime = $('#birthtime').val();
+//    patience.PregnantWeeks = parseInt($('#weeks').val()) * 7 + parseInt($('#days').val());
+//    patience.BirthPlace = $('#place').val();
+//    patience.BabyNum = $('#babynum').val();
+//    patience.BabyTime = $('#babytime').val();
+//    patience.BabyWeight = $('#babyweight').val();
+//    patience.BabyHeight = $('#babyheight').val();
+//    patience.Recordtime = Datetime_Now()
+//    patience = JSON.stringify(patience);
+
+
+
+//    $.ajax({
+//        url: '/api/Informationapi.ashx',
+//        type: "POST",
+//        cache: false,//是否要缓存
+//        async: false,//是否要异步
+//        //content-type:application/json,
+//        data: {
+//            patient: patience,
+//        },
+//        dataType: "text",//返回类型为“文本格式”:"text"；JSON格式：json
+//        success: function (msg) {
+//            alert(msg)
+//            initList()
+//            $('#content tr td input').val('');
+//        },
+//        error: function (a, b, c) {
+//            alert('failure')
+//        }
+//    })
+//};
 
 //Patient model
 function Patient() {
@@ -288,7 +332,8 @@ function editInfo(index) {
 
             var day = parseInt(info.PregnantWeeks / 7)
             var time = parseInt(info.PregnantWeeks) % 7
-            $('#BID').val(info.BID)
+            $('#BID').val(info.BID).attr('disabled', true)
+            
             $("#weeks").val(day)
             $('#days').val(time)
             $('#birthtime').val(btime)
